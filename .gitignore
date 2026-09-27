@@ -1,0 +1,15 @@
+# Secrets
+.fleethunt-token
+.env
+
+# Private operational data (VINs, GPS, routes, costs, prices, account numbers)
+refuel_audit.jsonl
+trips.json
+*.pdf
+*.csv
+
+# Caches / OS
+.cache/
+__pycache__/
+*.pyc
+.DS_Store

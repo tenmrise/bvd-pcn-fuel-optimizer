@@ -1,0 +1,24 @@
+# BVD fuel optimizer — Python dependencies.
+#
+# Install:   pip install -r requirements.txt
+# Requires:  Python 3.10 or newer (uses PEP 585 builtin generics: list[...],
+#            dict[..., ...], tuple[float, float], etc.)
+#
+# Versions below are what the local dev machine has tested with. They use
+# >= so deployments can pick up bug-fix releases without breaking; pin to
+# exact (==) if you want a fully-reproducible install.
+
+# PDF parsing — extracts station tables from the BVD daily price sheets
+pdfplumber>=0.11.9
+
+# HTTP — talks to FleetHunt API, Nominatim, OSRM, Overpass
+requests>=2.32
+
+# Numerical primitives for the LP solver
+numpy>=1.26
+
+# Linear-programming solver (scipy.optimize.linprog with HiGHS backend)
+scipy>=1.11
+
+# No other runtime deps — stdlib (argparse, datetime, json, pathlib, re,
+# subprocess, urllib, etc.) covers everything else.
